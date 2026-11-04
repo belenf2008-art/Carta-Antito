@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#70b8cf">
+<title>Anto ♡ Cinco años de nosotras</title>
+
+<style>
+:root {
+    --blue: #28536b;
+    --dark: #14394c;
+    --sky: #70b8cf;
+    --cream: #f5ead6;
+    --paper: #fffaf0;
+    --green: #dcebe6;
+    --peach: #f1d7bd;
+    --ink: #173b52;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: .65;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #e6a65c;
+    outline-offset: 5px;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 100svh;
+    padding: 35px 20px 100px;
+    background: var(--sky);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: appear 1.2s ease both;
+}
+
+.hero h1 {
+    font-size: clamp(5rem, 23vw, 11rem);
+    font-weight: normal;
+    letter-spacing: -7px;
+    line-height: .95;
+    margin: 18px 0;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.hero-date {
+    font-family: Arial, sans-serif;
+    font-size: .7rem;
+    letter-spacing: 2px;
+    opacity: .75;
+    margin-bottom: 38px;
+}
+
+.open-btn {
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 15px 32px;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 rgba(23,59,82,.15);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.open-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 rgba(23,59,82,.15);
+}
+
+.sun {
+    position: absolute;
+    width: clamp(90px, 23vw, 155px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f8d889;
+    top: 9%;
+    right: 12%;
+    box-shadow: 0 0 50px rgba(248,216,137,.4);
+}
+
+.hero-doodle {
+    position: absolute;
+    opacity: .5;
+    font-size: 2.5rem;
+}
+
+.doodle-one { top: 25%; left: 10%; }
+.doodle-two { bottom: 25%; right: 12%; }
+.doodle-three { bottom: 18%; left: 18%; }
+
+.waves {
+    position: absolute;
+    height: 85px;
+    bottom: -45px;
+    left: -5%;
+    width: 110%;
+    background: var(--cream);
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DONDE TODO EMPEZÓ */
+
+.intro {
+    min-height: 90svh;
+    background: var(--paper);
+    padding: 110px 22px;
+    display: grid;
+    place-items: center;
+}
+
+.intro-paper {
+    width: min(700px, 100%);
+    padding: 55px clamp(20px, 6vw, 55px);
+    position: relative;
+    transform: rotate(-1deg);
+}
+
+.tape {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 100px;
+    height: 26px;
+    background: rgba(244,218,159,.75);
+}
+
+.intro h2 {
+    font-size: clamp(3.5rem, 13vw, 6rem);
+    line-height: .95;
+    font-weight: normal;
+    margin: 22px 0 35px;
+}
+
+.intro p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.intro-end {
+    font-style: italic;
+    font-size: 1.3rem !important;
+    margin-top: 35px;
+}
+
+.paper-doodle {
+    position: absolute;
+    right: 4%;
+    top: 18%;
+    font-size: 2.3rem;
+    opacity: .4;
+}
+
+/* ARCHIVO INTERACTIVO */
+
+.archive {
+    background: var(--green);
+    padding: 105px 20px 120px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(3rem, 11vw, 5.5rem);
+    font-weight: normal;
+    line-height: .95;
+    margin: 18px 0;
+}
+
+.section-heading p {
+    font-family: Arial, sans-serif;
+    font-size: .8rem;
+    line-height: 1.7;
+    opacity: .7;
+}
+
+.archive-grid {
+    width: min(950px, 96%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.memory-card {
+    position: relative;
+    align-self: start;
+    min-height: 205px;
+    padding: 30px 22px;
+    border: none;
+    background: #fffdf5;
+    color: var(--ink);
+    box-shadow: 5px 7px 0 rgba(23,59,82,.1);
+    cursor: pointer;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    transition: transform .35s, box-shadow .35s;
+}
+
+.memory-card:nth-child(4n + 1) { transform: rotate(-2deg); }
+.memory-card:nth-child(4n + 2) { transform: rotate(2deg); }
+.memory-card:nth-child(4n + 3) { transform: rotate(1.5deg); }
+.memory-card:nth-child(4n) { transform: rotate(-1.5deg); }
+
+.memory-card::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 18px;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    background: rgba(244,218,159,.75);
+}
+
+.memory-icon {
+    display: block;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    transition: transform .35s;
+}
+
+.memory-card h3 {
+    font-weight: normal;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+.memory-hint {
+    font-family: Arial, sans-serif;
+    font-size: .65rem;
+    letter-spacing: 1px;
+    opacity: .5;
+}
+
+.memory-detail {
+    font-family: Arial, sans-serif;
+    font-size: .78rem;
+    line-height: 1.7;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .45s, opacity .35s;
+}
+
+.memory-card.open {
+    z-index: 3;
+    transform: translateY(-5px) rotate(0deg);
+    box-shadow: 9px 13px 0 rgba(23,59,82,.15);
+}
+
+.memory-card.open .memory-icon {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.memory-card.open .memory-hint {
+    display: none;
+}
+
+.memory-card.open .memory-detail {
+    max-height: 180px;
+    opacity: 1;
+}
+
+/* LO QUE NO SE VE EN LAS FOTOS */
+
+.meaning {
+    min-height: 90svh;
+    padding: 110px 25px;
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+}
+
+.meaning-content {
+    max-width: 760px;
+    text-align: center;
+}
+
+.meaning h2 {
+    font-size: clamp(2.7rem, 10vw, 5rem);
+    line-height: .98;
+    font-weight: normal;
+    margin: 22px 0 40px;
+}
+
+.meaning p {
+    font-size: 1.08rem;
+    line-height: 1.95;
+    margin-bottom: 25px;
+}
+
+.meaning-highlight {
+    margin-top: 35px;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-style: italic;
+}
+
+/* LO QUE ADMIRO */
+
+.admire {
+    min-height: 90svh;
+    padding: 110px 25px;
+    background: var(--peach);
+    display: grid;
+    place-items: center;
+}
+
+.admire-content {
+    max-width: 750px;
+    text-align: center;
+}
+
+.admire h2 {
+    font-size: clamp(3rem, 11vw, 5.5rem);
+    font-weight: normal;
+    line-height: .95;
+    margin: 22px 0 40px;
+}
+
+.admire p {
+    font-size: 1.08rem;
+    line-height: 1.95;
+    margin-bottom: 25px;
+}
+
+.admire-quote {
+    display: block;
+    margin-top: 35px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* CINCO AÑOS DESPUÉS */
+
+.future {
+    min-height: 100svh;
+    padding: 110px 25px;
+    background: var(--blue);
+    color: var(--paper);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.future-content {
+    max-width: 740px;
+}
+
+.future h2 {
+    font-size: clamp(3.2rem, 12vw, 6rem);
+    font-weight: normal;
+    line-height: .9;
+    margin: 25px 0 40px;
+}
+
+.future p {
+    font-size: 1.05rem;
+    line-height: 1.95;
+    margin-bottom: 25px;
+}
+
+.future-last {
+    margin-top: 40px;
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    font-style: italic;
+}
+
+/* FINAL */
+
+.final {
+    min-height: 100svh;
+    padding: 110px 22px 80px;
+    background: var(--dark);
+    color: var(--paper);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.final-content {
+    max-width: 700px;
+}
+
+.final h2 {
+    font-size: clamp(3.1rem, 12vw, 5.8rem);
+    line-height: .92;
+    font-weight: normal;
+    margin: 25px 0 35px;
+}
+
+.final p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.final-quote {
+    margin-top: 38px;
+    font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+    font-style: italic;
+}
+
+/* CANCIÓN */
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: min(480px, 100%);
+    margin: 45px auto 0;
+    padding: 22px;
+    background: var(--paper);
+    color: var(--ink);
+    text-align: left;
+    text-decoration: none;
+    box-shadow: 6px 7px 0 rgba(0,0,0,.16);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.song:hover {
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: 9px 12px 0 rgba(0,0,0,.16);
+}
+
+.song-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #e8d7c1;
+    font-size: 2rem;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-label {
+    font-family: Arial, sans-serif;
+    font-size: .6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: .55;
+}
+
+.song h3 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 7px 0;
+}
+
+.song p {
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+    margin: 0;
+    opacity: .65;
+}
+
+.song-arrow {
+    font-size: 1.5rem;
+}
+
+.signature {
+    margin-top: 50px;
+    font-size: 1.5rem !important;
+    font-style: italic;
+}
+
+.footer-note {
+    margin-top: 65px;
+    font-family: Arial, sans-serif;
+    font-size: .6rem;
+    letter-spacing: 3px;
+    opacity: .4;
+}
+
+/* ANIMACIÓN DE TOQUE */
+
+.ripple {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(23,59,82,.25);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple .65s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(6);
+        opacity: 0;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .archive-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        width: min(390px, 92%);
+    }
+
+    .memory-card {
+        min-height: 190px;
+        padding: 28px 24px;
+    }
+
+    .intro-paper {
+        padding: 50px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .song {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .song-icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1. PORTADA -->
+
+<section class="hero" id="inicio">
+
+    <div class="sun" aria-hidden="true"></div>
+
+    <div class="hero-doodle doodle-one" aria-hidden="true">✦</div>
+    <div class="hero-doodle doodle-two" aria-hidden="true">♡</div>
+    <div class="hero-doodle doodle-three" aria-hidden="true">✧</div>
+
+    <div class="hero-content">
+        <div class="small">una pequeña historia sobre nosotras</div>
+
+        <h1>Anto</h1>
+
+        <div class="hero-subtitle">cinco años de nosotras</div>
+
+        <div class="hero-date">
+            25.11.2021 — 25.11.2026
+        </div>
+
+        <button class="open-btn" id="openButton">
+            ABRIR ♡
+        </button>
+    </div>
+
+    <div class="waves" aria-hidden="true"></div>
+</section>
+
+
+<!-- 2. DONDE TODO EMPEZÓ -->
+
+<section class="intro" id="principio">
+
+    <div class="intro-paper reveal">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="paper-doodle" aria-hidden="true">♡</div>
+
+        <div class="small">25 de noviembre de 2021</div>
+
+        <h2>Anto:</h2>
+
+        <p>
+            No sé muy bien cómo empezar esta carta, porque cinco años suena muchísimo cuando lo digo así.
+        </p>
+
+        <p>
+            Es raro pensar que nos conocimos cuando nos sacamos esa foto de 8° básico, y que desde entonces hemos pasado por tantas cosas juntas.
+        </p>
+
+        <p>
+            Si en ese momento alguien me hubiera dicho que cinco años después estaría haciendo una página entera para ti, probablemente me habría reído JAJSJA.
+        </p>
+
+        <p class="intro-end">
+            Y, sin embargo, aquí estamos.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- 3. ARCHIVO DE RECUERDOS -->
+
+<section class="archive" id="recuerdos">
+
+    <div class="section-heading reveal">
+        <div class="small">evidencia de nuestra amistad</div>
+        <h2>Nuestro archivo</h2>
+        <p>
+            Hay cosas que merecen quedarse guardadas.<br>
+            Toca las tarjetas para abrirlas.
+        </p>
+    </div>
+
+    <div class="archive-grid">
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">💍</span>
+            <h3>Anillos de papel</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Cuando recién empezábamos 1° medio y nos hiciste anillos de papel a todas.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">⭐</span>
+            <h3>Harry Styles god</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Llevaste una foto de Harry Styles con toda la intención de ponerla en la sala pero NO NOS DEJARON ÑAKDJA
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🎉</span>
+            <h3>La fiesta sorpresa</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                La fiesta sorpresa que le hicimos a la Coni y se puso a pelear con su mamá en plena sorpresa...
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🎬</span>
+            <h3>Tardes en mi casa</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Viendo películas, jugando juegos de mesa y haciendo infinidades de tareas.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">✏️</span>
+            <h3>La croquera</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Todavía la tengo. Está llena de nuestros dibujos, especialmente las hojitas de Heartstopper.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🍫</span>
+            <h3>Los brownies</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Terminamos quemándolos y después comiéndolos mientras veíamos Ladybug. Una experiencia culinaria inolvidable, supongo.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🐶</span>
+            <h3>Bluey</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Cuando terminábamos alguna tarea y nos quedábamos viendo Bluey mientras esperábamos que te fueran a buscar.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🧸</span>
+            <h3>La mantita</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                La llevabas al colegio para taparnos y dormir cuando hacía frío.
+            </span>
+        </button>
+
+        <button class="memory-card reveal" aria-expanded="false">
+            <span class="memory-icon">🎵</span>
+            <h3>Mamma Mia</h3>
+            <span class="memory-hint">toca para recordar ↗</span>
+            <span class="memory-detail">
+                Una de esas cosas que ya se sienten muy nuestras. Hay canciones que simplemente no puedo escuchar sin acordarme de ti.
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- 4. EL SIGNIFICADO -->
+
+<section class="meaning">
+
+    <div class="meaning-content reveal">
+
+        <div class="small">lo que no se ve en las fotos</div>
+
+        <h2>Una amistad también se construye así.</h2>
+
+        <p>
+            Pensar en todo lo que hemos vivido hace que sea todavía más extraño recordar que todo empezó con una sesión de fotos de 8° básico.
+        </p>
+
+        <p>
+            Desde entonces hemos pasado por tantos grupos, dúos, amistades y etapas distintas. Pero supongo que justamente eso es lo bonito.
+        </p>
+
+        <p>
+            Nuestra amistad no se formó solamente a partir de momentos perfectos. Hemos tenido buenas y malas experiencias, hemos cambiado, hemos pasado por muchos grupos, duos, amistades y etapas distintas.
+        </p>
+
+        <p>
+            Tomando caminos diferentes y hemos pasado por etapas que probablemente ninguna de las dos imaginaba cuando nos conocimos.
+        </p>
+
+        <p>
+            Pero creo que eso también forma parte de querer a alguien: aceptar que ninguna de las dos se va a quedar exactamente igual para siempre.
+        </p>
+
+        <div class="meaning-highlight">
+            Y aun así, seguimos aquí.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 5. LO QUE ADMIRO DE TI -->
+
+<section class="admire">
+
+    <div class="admire-content reveal">
+
+        <div class="small">algo que quiero que sepas</div>
+
+        <h2>Lo que admiro de ti</h2>
+
+        <p>
+            Creo que una de las cosas que más admiro de ti es tu forma de ser.
+        </p>
+
+        <p>
+            Eres directa, tienes carácter y, aunque tú probablemente no lo veas así, creo que eres una persona muy fuerte.
+        </p>
+
+        <p>
+            Has pasado por cosas difíciles y aun así sigues avanzando. Quizás no siempre te das cuenta de cuánto has crecido, pero yo sí he podido verlo durante todos estos años.
+        </p>
+
+        <p>
+            No necesitas tener todo resuelto ni ser fuerte todo el tiempo para que eso siga siendo verdad.
+        </p>
+
+        <span class="admire-quote">
+            Espero que tú también puedas ver todo lo bueno que hay en ti.
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- 6. CINCO AÑOS DESPUÉS -->
+
+<section class="future">
+
+    <div class="future-content reveal">
+
+        <div class="small">y lo que todavía nos queda</div>
+
+        <h2>Cinco años después.</h2>
+
+        <p>
+            Me gusta pensar que nosotras hemos crecido juntas.
+        </p>
+
+        <p>
+            No somos las mismas niñas que se sacaron esa foto en 8° básico, y probablemente en otros cinco años tampoco seremos las mismas personas que somos ahora.
+        </p>
+
+        <p>
+            Hemos conocido personas distintas, tomado caminos diferentes y vivido etapas que ninguna de las dos imaginaba cuando nos conocimos.
+        </p>
+
+        <p>
+            No sé cómo va a ser nuestra vida en unos años. Quizás terminemos en lugares completamente diferentes, con trabajos nuevos, problemas nuevos y quién sabe qué más.
+        </p>
+
+        <p>
+            Pero espero que, aunque cambiemos, sigamos encontrando alguna forma de estar presentes en la vida de la otra.
+        </p>
+
+        <p>
+            Y si alguna vez necesitas a alguien, quiero que recuerdes que puedes contar conmigo. No tengo que saber solucionar todo lo que te pase para escucharte y acompañarte.
+        </p>
+        
+        <div class="future-last">
+            Ojalá nos queden muchas historias más.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 7. FINAL -->
+
+<section class="final" id="final">
+
+    <div class="final-content reveal">
+
+        <div class="small">antes de que te vayas</div>
+
+        <h2>Gracias por estos cinco años.</h2>
+
+        <p>
+            No sé si existe una forma perfecta de resumir una amistad de tantos años. Probablemente no, y quizás tampoco hace falta.
+        </p>
+
+        <p>
+            Solo quiero que sepas que me alegra que nuestras vidas se hayan cruzado y que hayamos podido compartir todas estas etapas.
+        </p>
+
+        <p>
+        Si tuviera que elegir una canción para ti, sería Chiquitita.
+        </p>
+
+        <p>
+            Obviamente tenía que ser de ABBA JSJAKS. Pero más allá de eso, me hace pensar en esa parte de una amistad en la que no necesitas solucionar la vida de la otra persona, simplemente quieres que sepa que no está sola.
+        </p>
+
+        <p>
+            No sé qué nos espera en los próximos años, pero espero que algún día podamos mirar atrás y reírnos de todo lo que hemos vivido.
+        </p>
+
+        <div class="final-quote">
+            Eres la mejor amiga que podría tener
+        </div>
+
+        <a
+            class="song"
+            href="https://open.spotify.com/track/762B4bOcXF7I2Y8UlKTyTy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escuchar Chiquitita de ABBA en Spotify"
+          >
+            <div class="song-icon">♫</div>
+
+            <div class="song-info">
+                <div class="song-label">esta canción es para ti</div>
+                <h3>Chiquitita</h3>
+                <p>ABBA · escuchar en Spotify</p>
+            </div>
+
+            <div class="song-arrow">↗</div>
+        </a>
+
+        <p class="signature">
+            Te quiero mucho, Antito ♡
+        </p>
+
+        <div class="footer-note">
+           (ME LA RE DI DE PROGRAMADORA)
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+/* APARICIONES AL HACER SCROLL */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach((element) => {
+        observer.observe(element);
+    });
+} else {
+    revealElements.forEach((element) => {
+        element.classList.add("visible");
+    });
+}
+
+
+/* BOTÓN DE PORTADA */
+
+document.getElementById("openButton").addEventListener("click", () => {
+    document.getElementById("principio").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+
+  /* TARJETAS INTERACTIVAS */
+
+const memoryCards = document.querySelectorAll(".memory-card");
+
+memoryCards.forEach((card) => {
+    card.addEventListener("click", () => {
+        const wasOpen = card.classList.contains("open");
+
+        memoryCards.forEach((other) => {
+            other.classList.remove("open");
+            other.setAttribute("aria-expanded", "false");
+        });
+
+        if (!wasOpen) {
+            card.classList.add("open");
+            card.setAttribute("aria-expanded", "true");
+        }
+    });
+});
+
+
+/* MOVIMIENTO SUAVE DEL SOL */
+
+const sun = document.querySelector(".sun");
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+    if (!sun || ticking) return;
+
+    ticking = true;
+
+    window.requestAnimationFrame(() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            sun.style.transform = "";
+        } else {
+            sun.style.transform =
+                `translateY(${window.scrollY * 0.1}px)`;
+          }
+
+        ticking = false;
+    });
+}, { passive: true });
+
+
+/* PEQUEÑO EFECTO AL TOCAR */
+
+const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+);
+
+document.addEventListener("pointerdown", (event) => {
+    if (reduceMotion.matches) return;
+
+    if (event.pointerType === "mouse") return;
+
+    const ripple = document.createElement("div");
+    ripple.className = "ripple";
+    ripple.style.left = event.clientX + "px";
+    ripple.style.top = event.clientY + "px";
+
+    document.body.appendChild(ripple);
+
+  window.setTimeout(() => {
+        ripple.remove();
+    }, 700);
+});
+</script>
+
+</body>
+</html>
